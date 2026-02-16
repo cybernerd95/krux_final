@@ -10,7 +10,7 @@ body {
     color: #222;
 }
 
-/* HEADER (Same Original Gradient) */
+/* HEADER */
 header {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
@@ -25,7 +25,40 @@ header {
     padding: 20px;
 }
 
-/* 3 PER ROW GRID */
+/* KPI ROW */
+.kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.kpi-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.kpi-card h4 {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.kpi-card p {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2c5364;
+}
+
+/* CHART GRID */
 .charts-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -42,7 +75,7 @@ header {
 .chart-box {
     background: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 8px 22px rgba(0,0,0,0.06);
     transition: all 0.3s ease;
     display: flex;
@@ -70,10 +103,18 @@ canvas {
     .charts-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .kpi-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
     .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kpi-row {
         grid-template-columns: 1fr;
     }
 }
