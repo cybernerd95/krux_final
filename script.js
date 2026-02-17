@@ -1,12 +1,10 @@
-// Global styling
-Chart.defaults.font.family = "'Inter', sans-serif";
+Chart.defaults.font.family = "'Poppins', sans-serif";
 Chart.defaults.color = "#1f2d3d";
 Chart.defaults.plugins.legend.position = "bottom";
+Chart.defaults.responsive = true;
+Chart.defaults.maintainAspectRatio = false;
 
-
-// ==============================
-// 1️⃣ Global Sports Market Growth
-// ==============================
+/* 1️⃣ Global Market */
 new Chart(document.getElementById("globalChart"), {
     type: 'line',
     data: {
@@ -22,47 +20,27 @@ new Chart(document.getElementById("globalChart"), {
     }
 });
 
-
-// ==============================
-// 2️⃣ IPL Media Rights Comparison
-// ==============================
+/* 2️⃣ IPL Media Rights */
 new Chart(document.getElementById("iplChart"), {
     type: 'bar',
     data: {
-        labels: ['2018–22 Cycle', '2023–27 Cycle'],
+        labels: ['2018–22', '2023–27'],
         datasets: [{
-            label: 'IPL Media Rights (USD Billion)',
+            label: 'USD Billion',
             data: [2.55, 6.2],
             backgroundColor: ['#203a43', '#2c5364']
         }]
     }
 });
 
-
-// ==============================
-// 3️⃣ IPL Brand Value Growth
-// ==============================
-new Chart(document.getElementById("segmentPie"), {
+/* 3️⃣ IPL Brand Value */
+new Chart(document.getElementById("brandChart"), {
     type: 'line',
     data: {
-        labels: [
-            '2016','2017','2018','2019','2020',
-            '2021','2022','2023','2024 (Proj)','2025 (Proj)'
-        ],
+        labels: ['2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'],
         datasets: [{
-            label: 'IPL Brand Value (USD Billion)',
-            data: [
-                4.16,
-                4.7,
-                5.3,
-                6.1,
-                5.4,   // COVID dip
-                7.0,
-                8.4,
-                10.7,
-                12.0,
-                13.5
-            ],
+            label: 'USD Billion',
+            data: [4.16,4.7,5.3,6.1,5.4,7.0,8.4,10.7,12.0,13.5],
             borderColor: '#1e3c72',
             backgroundColor: 'rgba(30,60,114,0.1)',
             fill: true,
@@ -71,101 +49,43 @@ new Chart(document.getElementById("segmentPie"), {
     }
 });
 
-
-// ==============================
-// 4️⃣ IPL Advertising Revenue
-// ==============================
-new Chart(document.getElementById("sponsorLine"), {
+/* 4️⃣ Revenue */
+new Chart(document.getElementById("revenueChart"), {
     type: 'line',
     data: {
-        labels: [
-            '2016','2017','2018','2019','2020',
-            '2021','2022','2023','2024','2025 (Est)'
-        ],
+        labels: ['Y1','Y2','Y3','Y4','Y5'],
         datasets: [{
-            label: 'IPL Advertising Revenue (₹ Crore)',
-            data: [
-                1500,
-                1800,
-                2000,
-                2400,
-                2200,  // pandemic dip
-                3000,
-                3900,
-                4500,
-                5200,
-                6500
-            ],
-            borderColor: '#4e73df',
-            backgroundColor: 'rgba(78,115,223,0.15)',
-            fill: true,
-            tension: 0.35
-        }]
-    }
-});
-
-
-// ==============================
-// 5️⃣ Fantasy Sports India Market
-// ==============================
-new Chart(document.getElementById("comparisonBar"), {
-    type: 'line',
-    data: {
-        labels: ['2021','2022','2023','2024','2025 (Proj)'],
-        datasets: [{
-            label: 'Fantasy Sports India (₹ Crore)',
-            data: [
-                3400,
-                4200,
-                5300,
-                6700,
-                8200
-            ],
+            label: 'Revenue (₹ Cr)',
+            data: [9.9,15.4,23.3,39.5,55.2],
             borderColor: '#2c5364',
             backgroundColor: 'rgba(44,83,100,0.15)',
             fill: true,
-            tension: 0.35
+            tension: 0.4
         }]
     }
 });
 
-
-// ==============================
-// 6️⃣ IPL Economic Contribution
-// ==============================
-new Chart(document.getElementById("donutChart"), {
-    type: 'doughnut',
+/* 5️⃣ EBITDA */
+new Chart(document.getElementById("ebitdaChart"), {
+    type: 'bar',
     data: {
-        labels: [
-            'Direct Impact',
-            'Indirect & Induced Impact'
-        ],
+        labels: ['Y1','Y3','Y5'],
         datasets: [{
-            data: [3.5, 3.2],  // total ≈ 6.7B
-            backgroundColor: ['#203a43', '#2c5364']
+            label: 'EBITDA (₹ Cr)',
+            data: [-1.5,5.3,27.2],
+            backgroundColor: ['#d9534f','#f0ad4e','#2c5364']
         }]
     }
 });
 
-
-// ==============================
-// 7️⃣ Employment Growth Index
-// ==============================
-new Chart(document.getElementById("jobsStacked"), {
+/* 6️⃣ Employment */
+new Chart(document.getElementById("jobsChart"), {
     type: 'line',
     data: {
-        labels: ['2019','2020','2021','2022','2023','2024','2025 (Proj)'],
+        labels: ['2019','2020','2021','2022','2023','2024','2025'],
         datasets: [{
-            label: 'Employment Index (Base 2019 = 100)',
-            data: [
-                100,
-                85,
-                95,
-                110,
-                125,
-                140,
-                155
-            ],
+            label: 'Index (2019=100)',
+            data: [100,85,95,110,125,140,155],
             borderColor: '#2c5364',
             backgroundColor: 'rgba(44,83,100,0.15)',
             fill: true,

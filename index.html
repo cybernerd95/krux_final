@@ -2,50 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PGP–SMG Industry Dashboard</title>
+    <title>PGP–SMG Strategic Industry Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
 <header>
-    <h1>PGP–SMG Strategic Industry Dashboard</h1>
-    <p>India Sports & Fan Economy Intelligence | MBA Framework</p>
+    <h1>PGP–SMG Financial & Industry Dashboard</h1>
+    <p>Live Sports & Fan Economy Operating Platform</p>
 </header>
 
 <div class="dashboard">
 
-    <!-- EXECUTIVE KPI STRIP -->
+    <!-- KPI STRIP -->
     <div class="kpi-row">
-
         <div class="kpi-card">
-            <h4>Global Sports Industry 2024</h4>
-            <p>$506.7B</p>
+            <h4>Break-even Cohort</h4>
+            <p>~58 Students</p>
         </div>
-
         <div class="kpi-card">
-            <h4>Projected 2026</h4>
-            <p>$500B+</p>
+            <h4>Contribution Margin</h4>
+            <p>60%</p>
         </div>
-
         <div class="kpi-card">
-            <h4>IPL Ecosystem Value</h4>
-            <p>$10.7B</p>
+            <h4>Year 5 Revenue</h4>
+            <p>₹55.2 Cr</p>
         </div>
-
         <div class="kpi-card">
-            <h4>India Fan Economy</h4>
-            <p>₹50,000+ Cr (expt.)</p>
+            <h4>Year 5 EBITDA</h4>
+            <p>₹27.2 Cr</p>
         </div>
-
     </div>
 
-
+    <!-- CHARTS -->
     <div class="charts-grid">
 
         <div class="chart-box">
@@ -59,29 +53,45 @@
         </div>
 
         <div class="chart-box">
-            <h3>3. India Sports Industry Segments</h3>
-            <canvas id="segmentPie"></canvas>
+            <h3>3. IPL Brand Value Growth</h3>
+            <canvas id="brandChart"></canvas>
         </div>
 
         <div class="chart-box">
-            <h3>4. Sponsorship Growth (2023–2026)</h3>
-            <canvas id="sponsorLine"></canvas>
+            <h3>4. 5-Year Revenue Projection</h3>
+            <canvas id="revenueChart"></canvas>
         </div>
 
         <div class="chart-box">
-            <h3>5. Franchise vs Sponsorship Revenue</h3>
-            <canvas id="comparisonBar"></canvas>
+            <h3>5. EBITDA Progression</h3>
+            <canvas id="ebitdaChart"></canvas>
         </div>
 
         <div class="chart-box">
-            <h3>6. Digital & Fantasy Market Share</h3>
-            <canvas id="donutChart"></canvas>
+            <h3>6. Employment Growth Index</h3>
+            <canvas id="jobsChart"></canvas>
         </div>
 
-        <div class="chart-box">
-            <h3>7. Employment Growth Projection</h3>
-            <canvas id="jobsStacked"></canvas>
-        </div>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references">
+        <h2>References</h2>
+
+        <p><strong>KPMG in India.</strong> (2025). <em>Sportlight – The Business of Sports in India.</em> KPMG.  
+        (Global sports market size; IPL valuation; digital ecosystem; infrastructure gaps.)</p>
+
+        <p><strong>Bindra, A.</strong> (Chair). (2025). <em>Task Force Report on Capacity Building of Sports Administrators.</em> Ministry of Youth Affairs & Sports, Government of India.  
+        (Governance deficits; need for professionalised sports administration.)</p>
+
+        <p><strong>Houlihan Lokey.</strong> (2025). <em>Indian Premier League Valuation Study 2025.</em>  
+        (IPL enterprise value and commercial scale.)</p>
+
+        <p><strong>National Collegiate Athletic Association (NCAA).</strong> (2024). <em>Finances of Intercollegiate Athletics Report.</em>  
+        (Collegiate revenue models: media rights, sponsorships, revenue sharing.)</p>
+
+        <p><strong>PwC.</strong> (2024). <em>Sports Industry Outlook Report.</em> PwC.  
+        (Media monetisation and digital fan engagement trends.)</p>
 
     </div>
 
